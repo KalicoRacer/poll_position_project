@@ -1,19 +1,19 @@
 CREATE TABLE circuits (
-   circuitID INT PRIMARY KEY,
-   circuitRef TEXT,
+   circuit_id INT PRIMARY KEY,
+   circuit_ref TEXT,
    name TEXT,
    location TEXT,
    country TEXT
 );
 CREATE TABLE constructors (
-   constructorId INT PRIMARY KEY,
-   constructorRef TEXT,
+   constructor_id INT PRIMARY KEY,
+   constructor_ref TEXT,
    name TEXT,
    nationality TEXT
 );
 CREATE TABLE drivers (
-   driverId INT PRIMARY KEY,
-   driverRef TEXT,
+   driver_id INT PRIMARY KEY,
+   driver_ref TEXT,
    code TEXT,
    forename TEXT,
    surname TEXT,
@@ -21,31 +21,31 @@ CREATE TABLE drivers (
    nationality TEXT
 );
 CREATE TABLE qualifying (
-   qualifyId INT PRIMARY KEY,
-   raceId INT,
-   driverId INT,
-   constructorId INT,
+   qualify_id INT PRIMARY KEY,
+   race_id INT,
+   driver_id INT,
+   constructor_id INT,
    number INT,
    position INT
 );
 CREATE TABLE races (
-   raceId INT PRIMARY KEY,
+   race_id INT PRIMARY KEY,
    year INT,
    round INT,
-   circuitId INT,
+   circuit_id INT,
    name TEXT,
    date DATE
 );
 CREATE TABLE results (
-   resultId INT PRIMARY KEY,
-   raceId INT,
-   driverId INT,
-   constructorId INT,
+   result_id INT PRIMARY KEY,
+   race_id INT,
+   driver_id INT,
+   constructor_id INT,
    grid INT,
-   positionOrder INT,
-   statusId INT
+   position_order INT,
+   status_id INT
 );
 CREATE TABLE status (
-   statusId INT PRIMARY KEY,
+   status_id INT PRIMARY KEY,
    status TEXT
 );
